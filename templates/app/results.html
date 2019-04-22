@@ -5,7 +5,12 @@
 <h2>Result Image</h2>
 <img src="{{ resultImage }}"/>
 
-{% for key,value in dicTable.items %}
-{{ key }}
-{{ value }}
+<table>
+    <tr><th>DESCRIPTION</th><th>COUNT</th></tr>
+    {% for key,value in dicTable.items %}
+    <tr>    
+    <td>{{ key }}</td>
+    <td>{{ value }}</td>
+    </tr>
 {% endfor %}
+</table>
