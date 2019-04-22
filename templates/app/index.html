@@ -1,0 +1,144 @@
+ {% load static %}
+ <!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link class="jsbin" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<title>Traffic Density Estimation using YOLO</title>
+</head>
+<body>
+<a href="#top"><img class="arrow_image" src="{% static 'arrow.svg' %}"></a>
+<a name="top"></a>
+<div id="change_class" class="flex_container section menu_section">
+	<div class="flex_item branding"><p></p></div>
+	<div class="flex_item menu_item dropdown">
+		<p>Menu</p>
+		<div class="dropdown-content">
+			<div class="menu_item menu_item_inside"><a href="#top"><p>Home</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#team"><p>Team</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#contact"><p>Offers</p></a></div>
+		</div>
+	</div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#top"><p>Home</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#team"><p>Team</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#contact"><p>Steps</p></a></div></a>
+	<div class="flex_item menu_item menu_item_outside"><a href="#compute"><p>Compute</p></a></div></a>
+</div>
+
+<div class="section page header_section">
+<div class="gradient gradient_red_blue gradient_header_section"></div>
+	<div class="section_container header_section_container flex_container flex_header_container">
+		<div class="text header_text">
+			<h2 style="color: white">TRAFFIC DENSITY ESTIMATION USING YOLO</h2>
+		</div>
+		<div class="text body_text flex_item flex_header_item">
+			<h2 class="header_quote" style="color: white">We Automate the signal timers based on traffic density!</h2>
+		</div>
+	</div>
+</div>
+
+<div class="section page second_section">
+<a name="team"></a>
+	<div class="section_container second_section_container flex_container flex_center">
+		<div class="text header_text text_grad_purple_yellow">
+			<h1>Our Team</h1>
+		</div>
+		<a href="#link1">
+			<div class="feature flex_feature_item feature1">
+				<div class="feature_image"></div>
+				<h3 style="text-align: center;">AKSHAT TRIVEDI</h3>
+			
+			</div>
+		</a>
+		<a href="#link2">
+			<div class="feature flex_feature_item feature2">
+				<div class="feature_image"></div>
+				<h3 style="text-align: center;">NIDUTT BHUPTANI</h3>
+			
+			</div>
+		</a>
+		<a href="#link3">
+			<div class="feature flex_feature_item feature3">
+				<div class="feature_image"></div>
+				<h3 style="text-align: center;">URVI KHEMKA</h3>
+				
+			</div>
+		</a>
+		<a href="#link4">
+			<div class="feature flex_feature_item feature4">
+				<div class="feature_image"></div>
+				<h3 style="text-align: center;">SANJEEV</h3>
+				
+			</div>
+		</a>
+		
+	</div>
+</div>
+
+<div class="section page third_section_container">
+<a name="contact"></a>
+	<div class="gradient gradient_red_yellow gradient_third_section"></div>
+	<div class="section_container third_section_container flex_container flex_center">
+		<div class="text header_text">
+			<h1>Steps</h1>
+		</div>
+		<a href="#link6"><div class="feature offer flex_feature_item offer1">
+			<h2>Import Pre-Trained Model</h2>
+			<p>We import the pre-trained Model using the COCO Dataset</p><br>
+			<p> This model can detect upto 83 different classesss.</p>
+		</div></a>
+		<a href="#link7"><div class="feature offer flex_feature_item offer2">
+			<h2>Process the image</h2>
+			<p>Pass the image through various hidden layers- including max pooling</p><br>
+			<p>Count the number of cars, buses, trucks and 2 wheelers.</p>
+		</div></a>
+		<a href="#link8"><div class="feature offer flex_feature_item offer3">
+			<h2>Automate the timer</h2>
+			<p>Based on the number of 2 wheelers and cars, get the signal timers</p><br>
+			<p>So if there are more 2 wheelers, time assigned will be less.</p>
+		</div></a>
+	</div>
+</div>
+
+
+
+<div class="last container" name="compute" style="height: 500px;background-color: #B7672Cac">
+	
+	<h3 style="text-align: center"> Please enter the traffic image at a stop to be processed
+	 <br><br><br>
+	 <form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Upload Image</button>
+	</form>
+</div>
+
+<!--SCRIPT SECTION-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE-AatCnNmEzkMZL2Rmqu87zjmDqpU3vA&callback=initMap"></script>
+
+<script src="{% static 'script.js' %}"></script>
+
+</body>
+<script>
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</html> 
