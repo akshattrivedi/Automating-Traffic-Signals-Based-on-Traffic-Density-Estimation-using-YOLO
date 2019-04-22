@@ -11,7 +11,7 @@ a:link, a:visited {color: #111111; text-decoration: none;}
 a:hover,a:active {color: #001f3f;}
 
 /*GENERAL*/
-.section {}
+/* .section {} */
 .section .header_text {z-index: 1;}
 .up_button {
 	position: fixed;
@@ -102,13 +102,13 @@ background: linear-gradient(65deg, #3D9970, #FFDC00); /* Standard syntax */
 
 .text_grad_purple_yellow {
 	background: -webkit-linear-gradient(65deg, #85144b, #FFDC00);
-  	-webkit-background-clip: text;
+  	/* -webkit-background-clip: text; */
  	-webkit-text-fill-color: transparent;
 }
 
 .text_grad_green_yellow {
 	background: -webkit-linear-gradient(65deg, #3D9970, #FFDC00);
-  	-webkit-background-clip: text;
+  	/* -webkit-background-clip: text; */
  	-webkit-text-fill-color: transparent;
 }
 
@@ -246,7 +246,7 @@ z-index: 150;
 	background-image: url(./images/5.jpg);
 	background-size: cover;
 }
-.header_section_container {}
+/* .header_section_container {} */
 /*SECOND*/
 .second_section {
 	min-height: 700px;
@@ -259,7 +259,7 @@ z-index: 150;
 	  rgba(0, 116 ,217, 0.01) 5px
 	);
 }
-.second_section_container {}
+/* .second_section_container {} */
 	/*FEATURED*/
 	.feature {
 		min-width: 250px;
@@ -298,7 +298,7 @@ z-index: 150;
 	background-image: url(./images/11.jpg);
 	background-size: cover;
 }	
-.third_section_container {}
+/* .third_section_container {} */
 /*
 @media screen and (max-width: 1619px) {
 	.gradient_third_section {height: 800px;}
