@@ -4,7 +4,9 @@ body {height: auto; width: auto; margin: 0px; padding: 0px;}
 
 h1 {color: #111111;}
 h1 {font-family: 'Pacifico', cursive; text-align: center; font-size: 80px;}
-h2 {font-family: 'Pacifico', cursive; text-align: center; font-size: 40px;}
+h2 {
+	font-family: 'sans-serif',cursive; text-align: center; font-size: 40px;
+}
 
 a:link, a:visited {color: #111111; text-decoration: none;}
 
@@ -264,7 +266,7 @@ z-index: 150;
 	.feature {
 		min-width: 250px;
 		max-width: 300px;
-		height: 265px;
+		height: 300px;
 		margin-right: 20px;
 		margin-left: 20px;
 		margin-bottom: 40px;
@@ -280,11 +282,11 @@ z-index: 150;
 	.feature h2 {line-height: 0;}
 	.feature p {text-align: center; margin: auto; max-width: 200px;}
 	.feature .feature_image {width: 200px; height: 200px; margin: auto; border-radius: 200px; background-size: cover;}
-	.feature1 .feature_image {background-image: url(./images/surf01.jpg);}
-	.feature2 .feature_image {background-image: url(./images/surf02.jpg);}
-	.feature3 .feature_image {background-image: url(./images/surf03.jpg);}
-	.feature4 .feature_image {background-image: url(./images/surf04.jpg);}
-	.feature5 .feature_image {background-image: url(./images/surf05.jpg);}
+	.feature1 .feature_image {background-image: url(./images/prof1.jpg);}
+	.feature2 .feature_image {background-image: url(./images/prof2.jpg);}
+	.feature3 .feature_image {background-image: url(./images/prof3.jpg);}
+	.feature4 .feature_image {background-image: url(./images/prof4.jpg);}
+	.feature5 .feature_image {background-image: url(./images/prof5.jpg);}
 	/*OFFERS*/
 	.offer {
 		min-width: 350px!important;
