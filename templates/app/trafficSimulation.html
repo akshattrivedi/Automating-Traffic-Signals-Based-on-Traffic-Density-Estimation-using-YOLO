@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traffic Simulation</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            box-sizing: border-box;
+            background: url('/static/images/background.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            max-width: 1800px;
+            margin: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            background-color: black;
+            color: cyan;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .container{
+        
+            overflow: auto;
+            background: white;
+            max-width: 1700px;
+            padding: 5px 0;
+            margin: 5px 0;
+        } 
+
+        .box{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background: white;
+            float: left;
+            width: 33%;
+            height: 350px;
+            overflow: auto;
+            text-align: center;
+        }
+        .box p{
+            font-size: 30px;
+            padding: 20px;
+            align-content: center;
+        }
+        td,tr,th{
+            padding: 5px;
+            border: 2px solid black;
+        }
+        table{
+            align-self: center;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        .box .signalbox{
+            overflow-y: auto;
+            color: white;
+            width: 100px;
+            height: 40px;
+            float: left;
+        }
+        .box img{
+            width: 80%;
+            height: 80%;
+        }
+
+        button{
+            padding: 20px 40px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>TRAFFIC SIMULATION</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+    <div class="container">        
+        {% csrf_token %}
+        
+        <div class="box">
+            
+        </div>
+
+        <div class="box">
+            <!-- <div class="signalbox" style="background:Green">
+                Green
+            </div> -->
+            <h2>ROAD 1</h2>
+            <!-- {{ url1 }} -->
+            <br><br>
+            <img src="{{ url1 }}"/>
+        
+        </div>
+
+        <div class="box">
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <button type="submit">NEXT SIMULATION</button>
+            <br><br>
+            <table>
+                    <tr><th rowspan="2">S.No.</th><th rowspan="2">Time(sec)</th><th colspan="2">Vehicle Count</th><th colspan="2">Traffic Signal Light</th></tr>
+                    <th>Road 1</th><th>Road 2</th><th>Road 1</th><th>Road 2</th></tr>
+                    {% for key,values in dispTable.items %}
+                    <tr>    
+                        <td>{{ key }}</td>
+                        {% for value in values %}
+                            <td> {{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+
+        <div class="box">
+            <P>Junction</P>
+        </div>
+
+        <div class="box">
+            <!-- <div class="signalbox" style="background:red;">
+                    Green
+            </div> -->
+            <h2>ROAD 2</h2>
+            <!-- {{ url2 }} -->
+            <br><br>
+            <img src="{{ url2 }}"/>
+        </div>
+    </div>
+    
+    <div class="container" style="background:none;">
+       <a href="/">Return to HomePage</a>
+    </div>
+</form>
+
+
+</body>
+</html>

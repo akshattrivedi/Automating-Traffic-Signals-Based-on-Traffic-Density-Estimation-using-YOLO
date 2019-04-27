@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            table{
+                border: 2px solid black;
+                border-collapse: collapse;
+                background: green;
+                margin: 1px 500px;
+            }
+            th,td{
+                border: 2px solid red;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    
+</head>
+<body>
+        <h1>TRAFFIC SIMULATION USING YOLO</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <button type="submit">NEXT</button>
+            <table>
+                <tr><th rowspan="2">Vehicle Count</th><th rowspan="2">Traffic Signal Light</th></tr>
+                <tr><th>S.No.</th><th>Time(sec)</th><th>Road 1</th><th>Road 2</th><th>Road 1</th><th>Road 2</th></tr>
+                {% for key,values in dispTable.items %}
+                <tr>    
+                    <td>{{ key }}</td>
+                    {% for value in values %}
+                        <td> {{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <h2>ROAD 1</h2>
+            {{ url1 }}
+            <br><br>
+            <img src="{{ url1 }}"/>
+        
+            <h2>ROAD 2</h2>
+            {{ url2 }}
+            <br><br>
+            <img src="{{ url2 }}"/>
+        </form>
+            
+</body>
+</html>

@@ -11,6 +11,10 @@ h2 {
 a:link, a:visited {color: #111111; text-decoration: none;}
 
 a:hover,a:active {color: #001f3f;}
+button{
+	width: 150px;
+	height: 40px;
+}
 
 /*GENERAL*/
 /* .section {} */

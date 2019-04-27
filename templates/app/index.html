@@ -29,8 +29,8 @@
 	<div class="flex_item menu_item menu_item_outside"><a href="#team"><p>Team</p></a></div>
 	<div class="flex_item menu_item menu_item_outside"><a href="#contact"><p>Steps</p></a></div></a>
 	<div class="flex_item menu_item menu_item_outside"><a href="#compute"><p>Compute</p></a></div></a>
+	<div class="flex_item menu_item menu_item_outside"><a href="trafficSimulation"><p>Traffic Simulation</p></a></div></a>
 </div>
-
 <div class="section page header_section">
 <div class="gradient gradient_red_blue gradient_header_section"></div>
 	<div class="section_container header_section_container flex_container flex_header_container">
@@ -122,6 +122,7 @@
 	 <form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form.as_p }}
+		<br>
 		<button type="submit">Upload Image</button>
 	</form>
 </div>
