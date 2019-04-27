@@ -166,10 +166,13 @@ def trafficSimulation(request):
 			mesasge1 = "Red"
 			mesasge2 = "Green"
 
+		signal1 = "background: "+mesasge1+";"
+		signal2 = "background: "+mesasge2+";"
+
 		time = tableIndex*10
 		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,mesasge1,mesasge2]})
 
-		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':mesasge1,'signal2':mesasge2}
+		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':signal1,'signal2':signal2}
 
 		return render(request,'app/trafficSimulation.html',context)
 	else:
@@ -239,11 +242,14 @@ def trafficSimulation(request):
 		else:
 			mesasge1 = "Red"
 			mesasge2 = "Green"
+		
+		signal1 = "background: "+mesasge1+";"
+		signal2 = "background: "+mesasge2+";"
 
 		time = tableIndex*10
 		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,mesasge1,mesasge2]})
 
-		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':mesasge1,'signal2':mesasge2}
+		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':signal1,'signal2':signal2}
 
 		return render(request,'app/trafficSimulation.html',context)
 
