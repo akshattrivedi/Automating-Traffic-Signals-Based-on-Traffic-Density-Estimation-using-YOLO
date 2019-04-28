@@ -15,13 +15,15 @@ $ python3 setup.py build_ext --inplace
 $ ./flow --model cfg/run/yolo.cfg --load bin/yolov2.weights --imgdir sample_img/
 ```
 
-* Retieve JSON Values of objects inside the image with labels alongwith dimensions of the bounding box and confidence values.
+* Retrieve JSON Values of objects inside the image with labels alongwith dimensions of the bounding box and confidence values.
 ```
 $ python3 JSONValues.py
 ```
 
-* HELP
+* HELP with YOLO options
+```
 $ ./flow --help
+```
 
 * Run the YOLO model on the Python-DJANGO website
 ```
