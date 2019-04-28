@@ -5,4 +5,30 @@ Automating the traffic signal timings using images of vehicles near the crossroa
 
 * Download YOLOv2 Weights: http://bit.ly/YOLOv2Weights
 * Copy 'yolov2.weights' to 'bin/' folder
-* Open run.txt
+* Setup YOLO
+```
+$ python3 setup.py build_ext --inplace
+```
+
+* Run YOLO for image directory
+```
+$ ./flow --model cfg/run/yolo.cfg --load bin/yolov2.weights --imgdir sample_img/
+```
+
+* Retieve JSON Values of objects inside the image with labels alongwith dimensions of the bounding box and confidence values.
+```
+$ python3 JSONValues.py
+```
+
+* HELP
+$ ./flow --help
+
+* Run the YOLO model on the Python-DJANGO website
+```
+$ python3 manage.py runserver
+```
+
+* There are two methods to run YOLO. Open Browser Type: localhost:8000
+
+* Upload any image on index page and find out number of vehicles belonging to different classes like Car, Motorbike, Truck, Bus, Bicycle
+* Run Traffic Simulation for an interval of 10 seconds by using the button 'Traffic Simulation' button on the index page.
