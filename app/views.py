@@ -157,20 +157,20 @@ def trafficSimulation(request):
 		elif tableIndex == 7:
 			totalVehicles2 = 37
 
-		mesasge1 = ""
-		mesasge2 = ""
+		message1 = ""
+		message2 = ""
 		if totalVehicles1 >= totalVehicles2:
-			mesasge1 = "Green"
-			mesasge2 = "Red"
+			message1 = "Green"
+			message2 = "Red"
 		else:
-			mesasge1 = "Red"
-			mesasge2 = "Green"
+			message1 = "Red"
+			message2 = "Green"
 
-		signal1 = "background: "+mesasge1+";"
-		signal2 = "background: "+mesasge2+";"
+		signal1 = "background: "+message1+";"
+		signal2 = "background: "+message2+";"
 
 		time = tableIndex*10
-		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,mesasge1,mesasge2]})
+		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,message1,message2]})
 
 		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':signal1,'signal2':signal2}
 
@@ -234,20 +234,20 @@ def trafficSimulation(request):
 		totalVehicles2 = carCount + motorbikeCount + truckCount + busCount + bicycleCount
 
 
-		mesasge1 = ""
-		mesasge2 = ""
+		message1 = ""
+		message2 = ""
 		if totalVehicles1 >= totalVehicles2:
-			mesasge1 = "Green"
-			mesasge2 = "Red"
+			message1 = "Green"
+			message2 = "Red"
 		else:
-			mesasge1 = "Red"
-			mesasge2 = "Green"
+			message1 = "Red"
+			message2 = "Green"
 		
-		signal1 = "background: "+mesasge1+";"
-		signal2 = "background: "+mesasge2+";"
+		signal1 = "background: "+message1+";"
+		signal2 = "background: "+message2+";"
 
 		time = tableIndex*10
-		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,mesasge1,mesasge2]})
+		dispTable.update({tableIndex : [time,totalVehicles1,totalVehicles2,message1,message2]})
 
 		context = {'url1':url1,'url2':url2,'dispTable':dispTable,'signal1':signal1,'signal2':signal2}
 
