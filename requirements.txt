@@ -1,6 +1,6 @@
 setuptools==41.0.1
 numpy==1.16.1
-Django==2.1.5
+Django==2.2.13
 tensorflow==1.13.1
 opencv-python-headless==4.4.0.42
 Cython==0.29.6
