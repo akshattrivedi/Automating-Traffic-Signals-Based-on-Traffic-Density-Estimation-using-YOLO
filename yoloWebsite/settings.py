@@ -25,7 +25,7 @@ SECRET_KEY = 'y%=()&r*9ld8bg#g=-p14&#z4fl3clawr324tc%55#%xk@0k60'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['traffic-signal-automation.herokuapp.com']
 
 
 # Application definition

@@ -1,7 +1,7 @@
 numpy==1.16.1
-Django==2.1.5
-tensorflow
-opencv_python==4.5.1.48
+Django==2.2.13
+tensorflow==2.5.0
+opencv-python-headless==4.4.0.42
 Cython==0.29.6
 requests==2.20.1
 pytest==4.5.0
