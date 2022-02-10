@@ -1,5 +1,5 @@
 numpy==1.16.1
-Django==2.2.24
+Django==2.2.27
 tensorflow==2.5.0
 opencv-python-headless==4.4.0.42
 Cython==0.29.6
