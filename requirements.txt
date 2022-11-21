@@ -1,6 +1,6 @@
 numpy==1.16.1
 Django==2.2.24
-tensorflow==2.5.0
+tensorflow==2.9.3
 opencv-python-headless==4.4.0.42
 Cython==0.29.6
 requests==2.20.1
